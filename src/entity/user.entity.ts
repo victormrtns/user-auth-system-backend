@@ -20,7 +20,7 @@ export class User{
   @Column()
   last_name: string;
   
-  @Column()
+  @Column({unique: true})
   @IsEmail()
   email: string;
 }
