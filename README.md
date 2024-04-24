@@ -45,6 +45,7 @@ Start the server
  - [How to implement Passport Strategy in Nest](https://docs.nestjs.com/recipes/passport)
  - [Repository Pattern](https://docs.nestjs.com/techniques/database#repository-pattern)
  - [TypeORM and Connecting to database](https://docs.nestjs.com/techniques/database#typeorm-transactions)
+ - [Using Guards](https://docs.nestjs.com/guards)
 
 
 ## 🛠 Skills
