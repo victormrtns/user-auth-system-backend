@@ -20,7 +20,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd api-create-login-user-backend
+  cd user-auth-system-backend
 ```
 
 Install dependencies
