@@ -1,4 +1,5 @@
-import { BadRequestException, Body, ConflictException, Controller, Get,Post } from "@nestjs/common";
+import { BadRequestException, Body, ConflictException, Controller, Get,Post, UseGuards, Request } from "@nestjs/common";
+import { AuthGuard } from "@nestjs/passport";
 import { InjectRepository } from "@nestjs/typeorm";
 import { CreateUserDTO } from "src/dto/create-user-dto";
 import { User } from "src/entity/user.entity";
@@ -23,4 +24,17 @@ export class UserController{
     await this.userService.create(request_user);
     return request_user;
   }
+
+  @UseGuards(AuthGuard('local'))
+  @Post('auth/login')
+  async login(@Request() req) {
+    
+    return req.user;
+  }
+  @UseGuards(AuthGuard('jwt'))
+  @Get('profile')
+  getProfile(@Request() req) {
+    return req.user;
+  }
+
 }
